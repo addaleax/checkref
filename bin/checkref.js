@@ -79,7 +79,6 @@ async.waterfall([
       });
       const report = instance.report();
       const stringified = report
-          .filter(r => r.type !== 'referenced-file-missing')
           .map(r => ` ${r.file.path} \t ${r.href} \t ${r.message}\n`)
           .join('');
       ui.div(` File \t Reference \t Message\n${stringified}`);
