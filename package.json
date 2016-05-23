@@ -1,0 +1,47 @@
+{
+  "name": "checkref",
+  "version": "1.0.0",
+  "description": "Check your HTML and Markdown for invalid local links & anchors",
+  "main": "index.js",
+  "bin": {
+    "checkref": "bin/checkref.js"
+  },
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "bl": "^1.1.2",
+    "cliui": "^3.2.0",
+    "duplexer2": "^0.1.4",
+    "glob": "^7.0.3",
+    "htmlparser2": "^3.9.0",
+    "markdown-it": "^6.0.2",
+    "markdown-it-anchor": "^2.5.0",
+    "mkdirp": "^0.5.1",
+    "readable-stream": "^2.1.4",
+    "yargs": "^4.7.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.1",
+    "nyc": "^6.4.4"
+  },
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/addaleax/checkref.git"
+  },
+  "keywords": [
+    "html",
+    "markdown",
+    "href",
+    "reference",
+    "link",
+    "anchor"
+  ],
+  "author": "Anna Henningsen <anna@addaleax.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/addaleax/checkref/issues"
+  },
+  "homepage": "https://github.com/addaleax/checkref#readme"
+}
