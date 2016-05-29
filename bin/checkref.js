@@ -8,6 +8,8 @@ const options = yargs
   .describe('out', 'output path for raw JSON output file')
   .boolean('check')
   .default('check', true)
+  .boolean('hide-missing')
+  .default('hide-missing', false)
   .string('_')
   .describe('_', 'paths to HTML input files')
   .help()
@@ -73,12 +75,14 @@ async.waterfall([
   },
   (instance, cb) => {
     if (options.check) {
+      const hideMissing = options.hideMissing;
       const cols = process.stderr.columns || yargs.terminalWidth() || 0;
       const ui = require('cliui')({
         width: cols, wrap: !!cols
       });
       const report = instance.report();
       const stringified = report
+          .filter(r => !hideMissing || r.type !== 'referenced-file-missing')
           .map(r => ` ${r.file.path} \t ${r.href} \t ${r.message}\n`)
           .join('');
       ui.div(` File \t Reference \t Message\n${stringified}`);
