@@ -1,6 +1,6 @@
 # checkref
 
-Check your HTML and Markdown for invalid local links & anchors
+Check your Markdown and HTML for invalid local links & anchors
 
 [![NPM Version](https://img.shields.io/npm/v/checkref.svg?style=flat)](https://npmjs.org/package/checkref)
 [![NPM Downloads](https://img.shields.io/npm/dm/checkref.svg?style=flat)](https://npmjs.org/package/checkref)
