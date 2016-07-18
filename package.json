@@ -1,7 +1,6 @@
 {
   "name": "checkref",
-  "version": "1.1.0",
-  "description": "Check your HTML and Markdown for invalid local links & anchors",
+  "version": "1.1.1",
   "main": "index.js",
   "bin": {
     "checkref": "bin/checkref.js"
